@@ -10,11 +10,6 @@ In this repository, we provide
 ## Project Overview
 Urban flooding poses significant challenges in densely populated areas. This project aims to improve flood risk assessments by integrating multi point-based observation data with physics-based flood model through indicator cokriging techniques.
 
-## Features
-* Indicator Cokriging Implementation: Utilizes the gstat package for geostatistical modeling.
-* Synthetic Data Generation: Creates synthetic datasets to simulate urban flood scenarios.
-* Visualization Tools: Provides scripts for visualizing flood risk maps and model outputs.
-
 ## Repository Structure
 ```
 urban-flood-risk-indicator-cokriging/
