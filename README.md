@@ -26,11 +26,11 @@ The `data/`  directory contains synthetic flood simulation results and supplemen
 | A1_road.asc                 | Rasterized road network data for Area 1 used as an auxiliary variable in cokriging. |
 
 ### 2. Code Description
-The `code/` directory contains R scripts that perform indicator cokriging analysis based on synthetic flood simulation data. Each script corresponds to a specific rainfall scenario and evaluates flood risk using 100% of the available sampling points in Area 1.
+The `code/` directory contains R scripts that perform indicator cokriging analysis based on synthetic flood simulation data. Each script corresponds to a specific rainfall scenario and evaluates flood risk using the 100 sampling points in Area 1.
 | File Name              | Description |
 |------------------------|-------------|
-| `A1_rr0.75_100p.R`     | Performs indicator cokriging for the **reduced rainfall** scenario (rr = 0.75) using 100% of the sampling points. |
-| `A1_rr1.25_100p.R`     | Performs indicator cokriging for the **increased rainfall** scenario (rr = 1.25) using 100% of the sampling points. |
+| `A1_rr0.75_100p.R`     | Performs indicator cokriging for the **reduced rainfall** scenario (rr = 0.75) using the sampling points. |
+| `A1_rr1.25_100p.R`     | Performs indicator cokriging for the **increased rainfall** scenario (rr = 1.25) using the sampling points. |
 
 # Getting Started
 ### Step-by-step Workflow
