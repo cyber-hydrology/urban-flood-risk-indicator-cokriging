@@ -16,11 +16,13 @@ Urban flooding poses significant challenges in densely populated areas. This pro
 * Visualization Tools: Provides scripts for visualizing flood risk maps and model outputs.
 
 ## Repository Structure
+```
 urban-flood-risk-indicator-cokriging/
 ├── data/               # Synthetic datasets and input files
-├── code/                # R scripts for modeling and analysis
+├── code/               # R scripts for modeling and analysis
 ├── results/            # Output figures and result summaries
 ├── README.md           # Project overview and instructions
+```
 
 # Getting Started
 ## Prerequisites
