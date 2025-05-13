@@ -67,7 +67,7 @@ The `code/` directory contains R scripts that perform indicator cokriging analys
 
 6. **Run indicator cokriging**
    - Fit variogram model
-   - Predict flood risk probabilities for Risk Level 2
+   - Predict flood risk probabilities for Risk Level 2 (flood)
    - Mask predictions by road area
 
 7. **Evaluate model performance**
