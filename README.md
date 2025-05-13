@@ -32,5 +32,47 @@ The `code/` directory contains R scripts that perform indicator cokriging analys
 | `A1_rr1.25_100p.R`     | Performs indicator cokriging for the **increased rainfall** scenario (rr = 1.25) using 100% of the sampling points. |
 
 # Getting Started
-## Prerequisites
-Ensure you have the following installed:
+### Step-by-step Workflow
+1. **Set your working directory**  
+   Edit the first few lines of the script to point to your local folder:
+   ```r
+   setwd("your/local/path/to/urban-flood-risk-indicator-cokriging")
+   ```
+
+2. **Load required libraries**  
+   Make sure all the following packages are installed:
+   ```r
+   library(gstat)
+   library(sp)
+   library(raster)
+   library(viridis)
+   library(dplyr)
+   library(gridExtra)
+   library(tidyr)
+   ```
+
+3. **Load input data**
+   - `A1_max_inun_rr1.00.asc`: base flood simulation
+   - `A1_max_inun_rr0.75.asc`: adjusted flood scenario (reduced rainfall)
+   - `A1_road.asc`: road network raster
+
+4. **Generate synthetic point-based observations**
+   - Extract flood-affected clusters and their proximity to roads
+   - Sample 100 flood-risk points weighted by distance to flood edge
+
+5. **Prepare cokriging variables**
+   - Extract flood depth and distance-to-flood from the adjusted map
+   - Assign risk levels and build spatial dataset
+
+6. **Run indicator cokriging**
+   - Fit variogram model
+   - Predict flood risk probabilities for Risk Level 2
+   - Mask predictions by road area
+
+7. **Evaluate model performance**
+   - Compute hit rate, false alarm ratio, CSI, and error bias
+   - Generate risk prediction and evaluation maps
+
+8. **Visualize results**
+   - Plot risk maps and overlay user locations
+   - Display performance metrics as a table
