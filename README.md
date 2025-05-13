@@ -71,7 +71,7 @@ The `code/` directory contains R scripts that perform indicator cokriging analys
    - Mask predictions by road area
 
 7. **Evaluate model performance**
-   - Compute hit rate, false alarm ratio, CSI, and error bias
+   - Compute hit rate, false alarm ratio, and critical success index
    - Generate risk prediction and evaluation maps
 
 8. **Visualize results**
