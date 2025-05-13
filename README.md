@@ -14,15 +14,22 @@ urban-flood-risk-indicator-cokriging/
 ├── results/            # Output figures and result summaries
 ├── README.md           # Project overview and instructions
 ```
-### Data Description
-The data/ directory contains synthetic flood simulation results and supplementary spatial data used for indicator cokriging analysis. These files are based on a physics-based urban flood model simulating the August 25, 2014 flood event in the Oncheon-cheon catchment in Busan, South Korea (Area 1).
+### 1. Data Description
+The `data/`  directory contains synthetic flood simulation results and supplementary spatial data used for indicator cokriging analysis. These files are based on a physics-based urban flood model simulating the August 25, 2014 flood event in the Oncheon-cheon catchment in Busan, South Korea (Area 1).
 
-| 파일 이름                    | 설명 |
+| File Name                    | Description |
 |-----------------------------|------|
-| A1_max_inun_rr1.00.asc      | 기준 강우 (rr = 1.00)에 대한 최대 침수심 시뮬레이션 결과 |
-| A1_max_inun_rr0.75.asc      | 강우량을 25% 줄인 경우 (rr = 0.75)에 대한 침수 결과 |
-| A1_max_inun_rr1.25.asc      | 강우량을 25% 증가시킨 경우 (rr = 1.25)에 대한 침수 결과 |
-| A1_road.asc                 | Area 1의 도로 정보를 담은 래스터 파일 |
+| A1_max_inun_rr1.00.asc      | Simulated maximum inundation depth for Area 1 under the base rainfall condition (rr = 1.00). |
+| A1_max_inun_rr0.75.asc      | Simulated inundation result for reduced rainfall (rr = 0.75), representing an underestimation scenario. |
+| A1_max_inun_rr1.25.asc      | Simulated inundation result for increased rainfall (rr = 1.25), representing an overestimation scenario. |
+| A1_road.asc                 | Rasterized road network data for Area 1 used as an auxiliary variable in cokriging. |
+
+### 2. Code Description
+The `code/` directory contains R scripts that perform indicator cokriging analysis based on synthetic flood simulation data. Each script corresponds to a specific rainfall scenario and evaluates flood risk using 100% of the available sampling points in Area 1.
+| File Name              | Description |
+|------------------------|-------------|
+| `A1_rr0.75_100p.R`     | Performs indicator cokriging for the **reduced rainfall** scenario (rr = 0.75) using 100% of the sampling points. |
+| `A1_rr1.25_100p.R`     | Performs indicator cokriging for the **increased rainfall** scenario (rr = 1.25) using 100% of the sampling points. |
 
 # Getting Started
 ## Prerequisites
